@@ -1,0 +1,60 @@
+{
+  "fecha_utc": "2026-09-16T01:19:45.985435+00:00",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "comando": [
+    "C:\\Users\\samso\\OneDrive\\Documentos\\Sam Stuff\\Tarea_Final_CC\\Modelo_Tarea_Final\\.venv\\Scripts\\python.exe",
+    "-m",
+    "uvicorn",
+    "app.main:app",
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "8001"
+  ],
+  "url": "http://127.0.0.1:8001",
+  "modelo_sha256": "aee7d85ea6601da6de960dcba6b675dfa60b89af491bb8fdbc9953ab05c06a10",
+  "solicitud": {
+    "Age": 25,
+    "Appearances": 30,
+    "Assists": 3,
+    "Shots": 60,
+    "Position": "Forward"
+  },
+  "health": {
+    "status": 200,
+    "body": {
+      "status": "ok"
+    }
+  },
+  "prediccion": {
+    "status": 200,
+    "body": {
+      "rango_goles_registrados": "1-9",
+      "probabilidades": {
+        "0": 0.07977894599876201,
+        "1-9": 0.68993637575592,
+        "10+": 0.23028467824531793
+      }
+    }
+  },
+  "validacion_entrada_negativa": {
+    "status": 422,
+    "body": {
+      "detail": [
+        {
+          "type": "greater_than_equal",
+          "loc": [
+            "body",
+            "Shots"
+          ],
+          "msg": "Input should be greater than or equal to 0",
+          "input": -1,
+          "ctx": {
+            "ge": 0
+          }
+        }
+      ]
+    }
+  },
+  "resultado": "PASS"
+}

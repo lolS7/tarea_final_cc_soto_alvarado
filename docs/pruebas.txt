@@ -1,0 +1,9 @@
+test_api (test_modelo.PruebasModelo.test_api) ... ok
+test_csv_automatico_y_objetivo (test_modelo.PruebasModelo.test_csv_automatico_y_objetivo) ... ok
+test_pickle_y_datos_faltantes (test_modelo.PruebasModelo.test_pickle_y_datos_faltantes) ... ok
+test_reproducibilidad (test_modelo.PruebasModelo.test_reproducibilidad) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.894s
+
+OK

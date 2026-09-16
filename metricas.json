@@ -1,0 +1,250 @@
+{
+  "objetivo": "Rango de goles registrados en el CSV (no goles futuros)",
+  "clases": [
+    "0",
+    "1-9",
+    "10+"
+  ],
+  "columnas_entrada": [
+    "Age",
+    "Appearances",
+    "Assists",
+    "Shots",
+    "Position"
+  ],
+  "filas_originales": 571,
+  "distribucion_clases": {
+    "0": 254,
+    "1-9": 209,
+    "10+": 108
+  },
+  "division": "60% entrenamiento, 20% validación, 20% prueba; estratificada, semilla 42",
+  "filas": {
+    "entrenamiento": 342,
+    "validacion": 114,
+    "prueba": 115
+  },
+  "seleccionado": "regresion_logistica",
+  "validacion": {
+    "regresion_logistica": {
+      "macro_f1": 0.8174434402504578,
+      "reporte": {
+        "0": {
+          "precision": 0.8070175438596491,
+          "recall": 0.9019607843137255,
+          "f1-score": 0.8518518518518519,
+          "support": 51.0
+        },
+        "1-9": {
+          "precision": 0.8235294117647058,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.7368421052631579,
+          "support": 42.0
+        },
+        "10+": {
+          "precision": 0.8260869565217391,
+          "recall": 0.9047619047619048,
+          "f1-score": 0.8636363636363636,
+          "support": 21.0
+        },
+        "accuracy": 0.8157894736842105,
+        "macro avg": {
+          "precision": 0.8188779707153647,
+          "recall": 0.8244631185807657,
+          "f1-score": 0.8174434402504578,
+          "support": 114.0
+        },
+        "weighted avg": {
+          "precision": 0.8166136501571603,
+          "recall": 0.8157894736842105,
+          "f1-score": 0.8116506710689536,
+          "support": 114.0
+        }
+      },
+      "matriz_confusion": [
+        [
+          46,
+          4,
+          1
+        ],
+        [
+          11,
+          28,
+          3
+        ],
+        [
+          0,
+          2,
+          19
+        ]
+      ]
+    },
+    "bosque_aleatorio": {
+      "macro_f1": 0.7789634729393766,
+      "reporte": {
+        "0": {
+          "precision": 0.8148148148148148,
+          "recall": 0.8627450980392157,
+          "f1-score": 0.8380952380952381,
+          "support": 51.0
+        },
+        "1-9": {
+          "precision": 0.7073170731707317,
+          "recall": 0.6904761904761905,
+          "f1-score": 0.6987951807228916,
+          "support": 42.0
+        },
+        "10+": {
+          "precision": 0.8421052631578947,
+          "recall": 0.7619047619047619,
+          "f1-score": 0.8,
+          "support": 21.0
+        },
+        "accuracy": 0.7807017543859649,
+        "macro avg": {
+          "precision": 0.788079050381147,
+          "recall": 0.7717086834733893,
+          "f1-score": 0.7789634729393766,
+          "support": 114.0
+        },
+        "weighted avg": {
+          "precision": 0.7802375715354567,
+          "recall": 0.7807017543859649,
+          "f1-score": 0.7797566204668298,
+          "support": 114.0
+        }
+      },
+      "matriz_confusion": [
+        [
+          44,
+          7,
+          0
+        ],
+        [
+          10,
+          29,
+          3
+        ],
+        [
+          0,
+          5,
+          16
+        ]
+      ]
+    }
+  },
+  "prueba": {
+    "macro_f1": 0.743399457685172,
+    "reporte": {
+      "0": {
+        "precision": 0.8301886792452831,
+        "recall": 0.8627450980392157,
+        "f1-score": 0.8461538461538461,
+        "support": 51.0
+      },
+      "1-9": {
+        "precision": 0.7142857142857143,
+        "recall": 0.5952380952380952,
+        "f1-score": 0.6493506493506493,
+        "support": 42.0
+      },
+      "10+": {
+        "precision": 0.6666666666666666,
+        "recall": 0.8181818181818182,
+        "f1-score": 0.7346938775510204,
+        "support": 22.0
+      },
+      "accuracy": 0.7565217391304347,
+      "macro avg": {
+        "precision": 0.737047020065888,
+        "recall": 0.7587216704863765,
+        "f1-score": 0.743399457685172,
+        "support": 115.0
+      },
+      "weighted avg": {
+        "precision": 0.7565764287667488,
+        "recall": 0.7565217391304347,
+        "f1-score": 0.7529551194147468,
+        "support": 115.0
+      }
+    },
+    "matriz_confusion": [
+      [
+        44,
+        6,
+        1
+      ],
+      [
+        9,
+        25,
+        8
+      ],
+      [
+        0,
+        4,
+        18
+      ]
+    ]
+  },
+  "baseline_prueba": {
+    "macro_f1": 0.20481927710843373,
+    "reporte": {
+      "0": {
+        "precision": 0.4434782608695652,
+        "recall": 1.0,
+        "f1-score": 0.6144578313253012,
+        "support": 51.0
+      },
+      "1-9": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 42.0
+      },
+      "10+": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 22.0
+      },
+      "accuracy": 0.4434782608695652,
+      "macro avg": {
+        "precision": 0.14782608695652175,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.20481927710843373,
+        "support": 115.0
+      },
+      "weighted avg": {
+        "precision": 0.19667296786389415,
+        "recall": 0.4434782608695652,
+        "f1-score": 0.27249869041382924,
+        "support": 115.0
+      }
+    },
+    "matriz_confusion": [
+      [
+        51,
+        0,
+        0
+      ],
+      [
+        42,
+        0,
+        0
+      ],
+      [
+        22,
+        0,
+        0
+      ]
+    ]
+  },
+  "advertencia": "Clasifica goles registrados; no estima goles de la siguiente temporada. Probabilidades no calibradas.",
+  "entorno": {
+    "python": "3.12.14",
+    "scikit-learn": "1.6.1",
+    "pandas": "2.2.3",
+    "numpy": "2.2.6"
+  },
+  "datos_sha256": "3b68e5d19cb4ca08b8d1b20abd1c3c774a7c37fbce5f1a313866807970782369"
+}
